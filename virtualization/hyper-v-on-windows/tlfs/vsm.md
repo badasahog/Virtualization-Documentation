@@ -23,7 +23,7 @@ VSM achieves and maintains isolation through Virtual Trust Levels (VTLs). VTLs a
 
 Virtual Trust Levels are hierarchical, with higher levels being more privileged than lower levels. VTL0 is the least privileged level, with VTL1 being more privileged than VTL0, VTL2 being more privileged than VTL1, etc.
 
-Architecturally, up to 16 levels of VTLs are supported; however a hypervisor may choose to implement fewer than 16 VTL’s. Currently, only two VTLs are implemented.
+Architecturally, up to 16 levels of VTLs are supported; however a hypervisor may choose to implement fewer than 16 VTLs. Currently, only two VTLs are implemented.
 
  ```c
 typedef UINT8 HV_VTL, *PHV_VTL;
