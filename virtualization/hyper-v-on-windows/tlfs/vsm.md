@@ -42,7 +42,7 @@ Since more privileged VTLs can enforce their own memory protections, higher VTLs
 There are multiple facets to achieving isolation between VTLs:
 
 - Memory Access Protections: Each VTL maintains a set of guest physical memory access protections. Software running at a particular VTL can only access memory in accordance with these protections.
-- Virtual Processor State: Virtual processors maintain separate per-VTL state. For example, each VTL defines a set of a private VP registers. Software running at a lower VTL cannot access the higher VTL’s private virtual processor’s register state.
+- Virtual Processor State: Virtual processors maintain separate per-VTL state. For example, each VTL defines a set of private VP registers. Software running at a lower VTL cannot access the higher VTL’s private virtual processor’s register state.
 - Interrupts: Along with a separate processor state, each VTL also has its own interrupt subsystem (local APIC). This allows higher VTLs to process interrupts without risking interference from a lower VTL.
 - Overlay Pages: Certain overlay pages are maintained per-VTL such that higher VTLs have reliable access. E.g. there is a separate hypercall overlay page per VTL.
 
